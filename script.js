@@ -88,19 +88,30 @@ let upperCasedCharacters = [
   'Z'
 ];
 
+// save information about user password length preferences
+let savedPassLength;
 
+// Function to prompt user for password length
 function setPasswordLength() {
+  // alert password length requirements
   alert("Choose you password length, from 10-64 characters");
+  // prompt user to enter password legth as a number
   let passLength = Number(window.prompt("Enter a number for your password length!!!"));
+  
   if (passLength >= 10 && passLength <= 64) {
-    alert("Your password length is " + passLength);
+    // alert user of password length choice if entered number is at least 10 characters but no more than 64.
+    savedPassLength = passLength;
+    alert("Your password will be " + passLength + " characters long!");
   } 
   else {
+    // alert user of invalid password entered
     alert("Password length invalid. Enter a number between 10-64!!!");
+    // rerun the function to set password if user answer is incorrect
     setPasswordLength();
   } 
 };
 setPasswordLength();
+console.log (savedPassLength);
 
 
 // Function to prompt user for password options
