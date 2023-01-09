@@ -90,6 +90,7 @@ let upperCasedCharacters = [
 
 // save information about user password length preferences
 let savedPassLength;
+
 // save information about user password length preferences
 let savedCharTypes = [];
 
@@ -146,6 +147,7 @@ function setCharacterTypes() {
     }
   }
   console.log(savedCharTypes)
+  // call function to confirm user selected atleast 1 character type
   charTypeRules();
 }
 
@@ -161,24 +163,24 @@ function charTypeRules() {
   }
 }
 
-// Function to prompt user for password options
+// Function for generating user password preferences i.e. password length and chracter types
 function getPasswordOptions() {
-  alert("Lets set your password criteria");
+  alert("Lets set your password preferences");
+  // call function to prompt user for password length
   setPasswordLength();
+  // call function to prompt user for password character types
   setCharacterTypes();
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  return arr[Math.floor(Math.random()*arr.length)]
 }
 
 // Function to generate password with user input
 function generatePassword() {
 
 }
-
-
 
 // Write password to the #password input
 function writePassword() {
