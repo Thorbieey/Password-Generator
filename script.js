@@ -109,9 +109,9 @@ function setPasswordLength() {
     // rerun the function to set password if user answer is incorrect
     setPasswordLength();
   } 
+  return passLength;
 };
-setPasswordLength();
-console.log (savedPassLength);
+
 
 
 // Function to prompt user for password options
@@ -134,10 +134,11 @@ let generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  let password = generatePassword();
-  let passwordText = document.querySelector('#password');
+  setPasswordLength();
+  // let password = generatePassword();
+  // let passwordText = document.querySelector('#password');
 
-  passwordText.value = password;
+  // passwordText.value = password;
 }
 
 // Add event listener to generate button
