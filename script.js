@@ -91,6 +91,17 @@ let upperCasedCharacters = [
 // save information about user password length preferences
 let savedPassLength;
 
+//Array of prompts containing questions regarding character preferences i.e. uppercase, lowercase, numeric or special characters
+let charTypePrompts = [
+  {prompt: 'Would you like Lowercase characters in your generated password? Enter Y for yes or any other letter for No', value: 'lowercase'},
+  {prompt: 'Would you like Uppercase characters in your generated password? Enter Y for yes or any other letter for No', value: 'uppercase'},
+  {prompt: 'Would you like Numeric characters in your generated password? Enter Y for yes or any other letter for No', value: 'numeric'},
+  {prompt: 'Would you like Special characters in your generated password? Enter Y for yes or any other letter for No', value: 'special'}
+];
+
+// Get references to the #generate element
+let generateBtn = document.querySelector('#generate');
+
 // Function to prompt user for password length
 function setPasswordLength() {
   // alert password length requirements
@@ -109,10 +120,14 @@ function setPasswordLength() {
     // rerun the function to set password if user answer is incorrect
     setPasswordLength();
   } 
+  // return information about selected user password length preference
   return passLength;
 };
 
-
+// Function to prompt user for character types preference
+function setCharacterTypes() {
+  
+}
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -129,8 +144,7 @@ function generatePassword() {
 
 }
 
-// Get references to the #generate element
-let generateBtn = document.querySelector('#generate');
+
 
 // Write password to the #password input
 function writePassword() {
