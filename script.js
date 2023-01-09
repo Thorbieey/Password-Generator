@@ -126,6 +126,13 @@ function setPasswordLength() {
 
 // Function to prompt user for character types preference
 function setCharacterTypes() {
+  // alert user of next step in password generation process
+  alert("A few more questions about your password criterias and we're all set");
+  for (let i = 0; i < charTypePrompts.length; i++) {
+    let charTypePreference = prompt(charTypePrompts[i].prompt);
+    console.log(charTypePreference);
+    
+  }
   
 }
 
@@ -148,7 +155,8 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  setPasswordLength();
+  // setPasswordLength();
+  setCharacterTypes();
   // let password = generatePassword();
   // let passwordText = document.querySelector('#password');
 
