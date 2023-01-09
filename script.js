@@ -94,7 +94,7 @@ let savedPassLength;
 // save information about user password length preferences
 let savedCharTypes = [];
 
-// list of options for character types
+// list of options for character types available to user
 let charTypes = {
   uppercase: upperCasedCharacters,
   lowercase: lowerCasedCharacters,
@@ -181,22 +181,34 @@ function getPasswordOptions() {
 }
 
 // Function for getting a random element from an array
-function getRandom(arr) {
-  return arr[Math.floor(Math.random()*arr.length)]
+function getRandomCharacter(array) {
+  return array[Math.floor(Math.random()*array.length)]
 }
 
 // Function to generate password with user input
 function generatePassword() {
-
+// string for generated password 
+let password = ''
+  for (let i = 0; i < savedPassLength; i++) {
+    // randomly select one of the character types chose by the user
+    let randomCharacter = getRandomCharacter(savedCharTypes);
+    // console.log(randomCharacter);
+    // randomly select one character from the randomly selected character type
+    let randomCharacterType = getRandomCharacter(charTypes[randomCharacter]);
+    // console.log(randomCharacterType);
+    // add randomly selected character to password string
+    password += randomCharacterType;
+  }
+return password
 }
 
 // Write password to the #password input
 function writePassword() {
   getPasswordOptions();
-  // let password = generatePassword();
-  // let passwordText = document.querySelector('#password');
+  let password = generatePassword();
+  let passwordText = document.querySelector('#password');
 
-  // passwordText.value = password;
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
