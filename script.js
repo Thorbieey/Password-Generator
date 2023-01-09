@@ -94,6 +94,14 @@ let savedPassLength;
 // save information about user password length preferences
 let savedCharTypes = [];
 
+// list of options for character types
+let charTypes = {
+  uppercase: upperCasedCharacters,
+  lowercase: lowerCasedCharacters,
+  special: specialCharacters,
+  numeric: numericCharacters
+}
+
 //Array of prompts containing questions regarding character preferences i.e. uppercase, lowercase, numeric or special characters
 let charTypePrompts = [
   {prompt: 'Include Lowercase characters in your generated password? Enter Y for yes or any other letter for No', value: 'lowercase'},
