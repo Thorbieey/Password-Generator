@@ -95,10 +95,10 @@ let savedCharTypes = [];
 
 //Array of prompts containing questions regarding character preferences i.e. uppercase, lowercase, numeric or special characters
 let charTypePrompts = [
-  {prompt: 'Would you like Lowercase characters in your generated password? Enter Y for yes or any other letter for No', value: 'lowercase'},
-  {prompt: 'Would you like Uppercase characters in your generated password? Enter Y for yes or any other letter for No', value: 'uppercase'},
-  {prompt: 'Would you like Numeric characters in your generated password? Enter Y for yes or any other letter for No', value: 'numeric'},
-  {prompt: 'Would you like Special characters in your generated password? Enter Y for yes or any other letter for No', value: 'special'}
+  {prompt: 'Include Lowercase characters in your generated password? Enter Y for yes or any other letter for No', value: 'lowercase'},
+  {prompt: 'Include Uppercase characters in your generated password? Enter Y for yes or any other letter for No', value: 'uppercase'},
+  {prompt: 'Include Numeric characters in your generated password? Enter Y for yes or any other letter for No', value: 'numeric'},
+  {prompt: 'Include Special characters in your generated password? Enter Y for yes or any other letter for No', value: 'special'}
 ];
 
 // Get references to the #generate element
@@ -129,7 +129,7 @@ function setPasswordLength() {
 // Function to prompt user for character types preference
 function setCharacterTypes() {
   // alert user of next step in password generation process
-  alert("A few more questions about your password criterias and we're all set");
+  alert("A few more questions about your password character types and we're all set");
   for (let i = 0; i < charTypePrompts.length; i++) {
     // prompt each question from the charTypePrompts array and store user character type preference
     // make user response case insensitive by converting response to lowercase 
@@ -145,6 +145,18 @@ function setCharacterTypes() {
       alert("Your password will not include " + charTypePrompts[i].value + " characters");
     }
   }  
+}
+
+console.log(savedCharTypes)
+
+// Function to make sure user selectes atleast one character type
+function charTypeRules() {
+  if (savedCharTypes.length < 1) {
+    // alert user that atlease one character type must chosen
+    alert('Invalid selection!!! Please chose at least one character type.');
+    // call function 
+    setCharacterTypes();
+  }
 }
 
 // Function to prompt user for password options
@@ -168,6 +180,7 @@ function generatePassword() {
 function writePassword() {
   // setPasswordLength();
   setCharacterTypes();
+  charTypeRules();
   // let password = generatePassword();
   // let passwordText = document.querySelector('#password');
 
