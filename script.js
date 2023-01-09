@@ -121,6 +121,7 @@ function setPasswordLength() {
   let passLength = Number(window.prompt("Enter a number for your password length!!!"));
   
   if (passLength >= 10 && passLength <= 64) {
+    // store value inputted by user for password length
     savedPassLength = passLength;
     // alert user of password length choice if entered number is at least 10 characters but no more than 64.
     alert("Your password will be " + passLength + " characters long!");
@@ -171,7 +172,7 @@ function charTypeRules() {
   }
 }
 
-// Function for generating user password preferences i.e. password length and chracter types
+// Function for collecting user password preferences i.e. password length and chracter types
 function getPasswordOptions() {
   alert("Lets set your password preferences");
   // call function to prompt user for password length
@@ -199,17 +200,21 @@ let password = ''
     // add randomly selected character to password string
     password += randomCharacterType;
   }
+  // returns the string of randomly generated characters
 return password
 }
 
 // Write password to the #password input
 function writePassword() {
+  // call the function which collects user password preferences
   getPasswordOptions();
+  // store generated password
   let password = generatePassword();
+  // variable containing password text area on webpage
   let passwordText = document.querySelector('#password');
-
   passwordText.value = password;
 }
 
 // Add event listener to generate button
+// run function to write password to display on click of button on page
 generateBtn.addEventListener('click', writePassword);
