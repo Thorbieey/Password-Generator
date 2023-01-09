@@ -131,19 +131,20 @@ function setCharacterTypes() {
   // alert user of next step in password generation process
   alert("A few more questions about your password criterias and we're all set");
   for (let i = 0; i < charTypePrompts.length; i++) {
-    const charTypePreference = prompt(charTypePrompts[i].prompt);
-    console.log(charTypePreference);
+    // prompt each question from the charTypePrompts array and store user character type preference
+    // make user response case insensitive by converting response to lowercase 
+    const charTypePreference = prompt(charTypePrompts[i].prompt).toLowerCase();
     if (charTypePreference === "y"){
+      // if user chooses yes, store corresponding value from the charTypePrompts to new array 
       savedCharTypes.push(charTypePrompts[i].value);
-      // alert user of password character type preference.
+      // alert user of password character type preference selected.
       alert("Your password will include " + charTypePrompts[i].value + " characters");
     }
     else{
-      // alert user of password character type preference.
+      // alert user that password character type wont be included in password.
       alert("Your password will not include " + charTypePrompts[i].value + " characters");
     }
-  }
-  
+  }  
 }
 
 // Function to prompt user for password options
