@@ -138,16 +138,18 @@ function setCharacterTypes() {
       // if user chooses yes, store corresponding value from the charTypePrompts to new array 
       savedCharTypes.push(charTypePrompts[i].value);
       // alert user of password character type preference selected.
-      alert("Your password will include " + charTypePrompts[i].value + " characters");
+      // alert("Your password will include " + charTypePrompts[i].value + " characters");
     }
     else{
       // alert user that password character type wont be included in password.
-      alert("Your password will not include " + charTypePrompts[i].value + " characters");
+      // alert("Your password will not include " + charTypePrompts[i].value + " characters");
     }
-  }  
+  }
+  console.log(savedCharTypes)
+  charTypeRules();
 }
 
-console.log(savedCharTypes)
+
 
 // Function to make sure user selectes atleast one character type
 function charTypeRules() {
@@ -161,7 +163,9 @@ function charTypeRules() {
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  alert("Lets set your password criteria");
+  setPasswordLength();
+  setCharacterTypes();
 }
 
 // Function for getting a random element from an array
@@ -178,9 +182,7 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  // setPasswordLength();
-  setCharacterTypes();
-  charTypeRules();
+  getPasswordOptions();
   // let password = generatePassword();
   // let passwordText = document.querySelector('#password');
 
