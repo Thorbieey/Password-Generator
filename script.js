@@ -90,6 +90,8 @@ let upperCasedCharacters = [
 
 // save information about user password length preferences
 let savedPassLength;
+// save information about user password length preferences
+let savedCharTypes = [];
 
 //Array of prompts containing questions regarding character preferences i.e. uppercase, lowercase, numeric or special characters
 let charTypePrompts = [
@@ -110,8 +112,8 @@ function setPasswordLength() {
   let passLength = Number(window.prompt("Enter a number for your password length!!!"));
   
   if (passLength >= 10 && passLength <= 64) {
-    // alert user of password length choice if entered number is at least 10 characters but no more than 64.
     savedPassLength = passLength;
+    // alert user of password length choice if entered number is at least 10 characters but no more than 64.
     alert("Your password will be " + passLength + " characters long!");
   } 
   else {
@@ -129,9 +131,17 @@ function setCharacterTypes() {
   // alert user of next step in password generation process
   alert("A few more questions about your password criterias and we're all set");
   for (let i = 0; i < charTypePrompts.length; i++) {
-    let charTypePreference = prompt(charTypePrompts[i].prompt);
+    const charTypePreference = prompt(charTypePrompts[i].prompt);
     console.log(charTypePreference);
-    
+    if (charTypePreference === "y"){
+      savedCharTypes.push(charTypePrompts[i].value);
+      // alert user of password character type preference.
+      alert("Your password will include " + charTypePrompts[i].value + " characters");
+    }
+    else{
+      // alert user of password character type preference.
+      alert("Your password will not include " + charTypePrompts[i].value + " characters");
+    }
   }
   
 }
