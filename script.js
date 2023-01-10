@@ -191,11 +191,11 @@ function generatePassword() {
 let password = ''
   for (let i = 0; i < savedPassLength; i++) {
     // randomly select one of the character types chose by the user
-    let randomCharacter = getRandomCharacter(savedCharTypes);
+    let randomCharacterType = getRandomCharacter(savedCharTypes);
     // randomly select one character from the randomly selected character type
-    let randomCharacterType = getRandomCharacter(charTypes[randomCharacter]);
+    let randomCharacter = getRandomCharacter(charTypes[randomCharacterType]);
     // add randomly selected character to password string
-    password += randomCharacterType;
+    password += randomCharacter;
   }
   // returns the string of randomly generated characters
 return password
