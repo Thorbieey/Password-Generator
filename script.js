@@ -148,14 +148,13 @@ function setCharacterTypes() {
       // if user chooses yes, store corresponding value from the charTypePrompts to new array 
       savedCharTypes.push(charTypePrompts[i].value);
       // alert user of password character type preference selected.
-      // alert("Your password will include " + charTypePrompts[i].value + " characters");
+      alert("Your password will include " + charTypePrompts[i].value + " characters");
     }
     else{
       // alert user that password character type wont be included in password.
-      // alert("Your password will not include " + charTypePrompts[i].value + " characters");
+      alert("Your password will not include " + charTypePrompts[i].value + " characters");
     }
   }
-  console.log(savedCharTypes)
   // call function to confirm user selected atleast 1 character type
   charTypeRules();
 }
@@ -193,10 +192,8 @@ let password = ''
   for (let i = 0; i < savedPassLength; i++) {
     // randomly select one of the character types chose by the user
     let randomCharacter = getRandomCharacter(savedCharTypes);
-    // console.log(randomCharacter);
     // randomly select one character from the randomly selected character type
     let randomCharacterType = getRandomCharacter(charTypes[randomCharacter]);
-    // console.log(randomCharacterType);
     // add randomly selected character to password string
     password += randomCharacterType;
   }

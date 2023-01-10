@@ -19,7 +19,7 @@ SO THAT i can easily create dynamic passwords
 
 * The JavaScript code prompts user for character types.
 
-* The JavaScript code validates users option to add aracter types lowercase, uppercase, numeric and/or special characters.
+* The JavaScript code validates users option to add lowercase, uppercase, numeric and/or special characters.
 
 * The code must ensure user selects atleast one of the character type options.
 
