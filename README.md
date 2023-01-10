@@ -5,22 +5,11 @@
 ### User Story
 
 ```
-AS AN employee i often require passwords of diff complexities often
+AS AN employee i often require passwords of different complexities 
 I WANT a code that generates a random password based on my selected criterias (i.e. length and character type)
 SO THAT i can easily create dynamic passwords
 ```
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 10 characters but no more than 64.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
-  
+
 ### Acceptance Criteria
 
 ```
@@ -30,11 +19,11 @@ SO THAT i can easily create dynamic passwords
 
 * The JavaScript code prompts user for character types.
 
-* The JavaScript code validates users option to add aracter types lowercase, uppercase, numeric and/or special characters
+* The JavaScript code validates users option to add aracter types lowercase, uppercase, numeric and/or special characters.
 
-* The code must ensure user selects atleast one of the character type options
+* The code must ensure user selects atleast one of the character type options.
 
-* Password is generated and displayed on the page after prompts are answered by the user
+* Password is generated based on user selected preferences and displayed on the page.
 
 ```
 
@@ -50,10 +39,10 @@ SO THAT i can easily create dynamic passwords
 ### Deployed Application
 
 * The URL of the deployed application:
-[https://thorbieey.github.io/Console-Finances-OT/](https://thorbieey.github.io/Console-Finances-OT/)
+[https://thorbieey.github.io/Password-Generator/](https://thorbieey.github.io/Password-Generator/)
 
 * The URL of the GitHub repository: 
-[https://github.com/Thorbieey/Console-Finances-OT.git](https://github.com/Thorbieey/Console-Finances-OT.git))
+[https://github.com/Thorbieey/Password-Generator.git](https://github.com/Thorbieey/Password-Generator.git)
 
 #### Screenshot/Demo
 
