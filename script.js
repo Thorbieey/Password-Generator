@@ -165,7 +165,7 @@ function setCharacterTypes() {
 function charTypeRules() {
   if (savedCharTypes.length < 1) {
     // alert user that atlease one character type must chosen
-    alert('Invalid selection!!! Please chose at least one character type.');
+    alert('Invalid selection!!! Please choose at least one character type.');
     // call function 
     setCharacterTypes();
   }
