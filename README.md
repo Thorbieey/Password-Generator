@@ -1,3 +1,76 @@
+# Password Generator -OT
+
+## Description 
+
+### User Story
+
+```
+AS AN employee i often require passwords of diff complexities often
+I WANT a code that generates a random password based on my selected criterias (i.e. length and character type)
+SO THAT i can easily create dynamic passwords
+```
+* Generate a password when the button is clicked
+  * Present a series of prompts for password criteria
+    * Length of password
+      * At least 10 characters but no more than 64.
+    * Character types
+      * Lowercase
+      * Uppercase
+      * Numeric
+      * Special characters ($@%&*, etc)
+  * Code should validate for each input and at least one character type should be selected
+  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
+  
+### Acceptance Criteria
+
+```
+* Password is generated when a button is clicked on the page.
+
+* The JavaScript code prompts user for length of password.
+
+* The JavaScript code prompts user for character types.
+
+* The JavaScript code validates users option to add aracter types lowercase, uppercase, numeric and/or special characters
+
+* The code must ensure user selects atleast one of the character type options
+
+* Password is generated and displayed on the page after prompts are answered by the user
+
+```
+
+## Table of Contents
+
+* [Description](#description)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+
+## Usage 
+
+### Deployed Application
+
+* The URL of the deployed application:
+[https://thorbieey.github.io/Console-Finances-OT/](https://thorbieey.github.io/Console-Finances-OT/)
+
+* The URL of the GitHub repository: 
+[https://github.com/Thorbieey/Console-Finances-OT.git](https://github.com/Thorbieey/Console-Finances-OT.git))
+
+#### Screenshot/Demo
+
+![Demo showing console display of the financial analysis](./images/demo-finance-analysis.png)
+
+## Credits
+
+* [Format numbers using fixed-point notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
+* [Meet array prototype: **push()**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push#:~:text=The%20push()%20method%20adds,new%20length%20of%20the%20array.)
+* [Meet array prototype: **indexOf()**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+* [Learn about selecting values in an array - part 1](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
+* [Learn about selecting values in an array - part 2](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min)
+
+## License
+
+Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license
+
 # Module 5 Challenge: Password Generator
 
 ## Overview
