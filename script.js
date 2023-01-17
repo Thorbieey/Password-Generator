@@ -138,6 +138,8 @@ function setPasswordLength() {
 
 // Function to prompt user for character types preference
 function setCharacterTypes() {
+  // empty the array for set character types
+  savedCharTypes = [];
   // alert user of next step in password generation process
   alert("A few more questions about your password character types and we're all set");
   for (let i = 0; i < charTypePrompts.length; i++) {
@@ -188,10 +190,11 @@ function getRandomCharacter(array) {
 // Function to generate password with user input
 function generatePassword() {
 // string for generated password 
-let password = ''
+let password = '';
   for (let i = 0; i < savedPassLength; i++) {
     // randomly select one of the character types chose by the user
     let randomCharacterType = getRandomCharacter(savedCharTypes);
+    console.log(randomCharacterType);
     // randomly select one character from the randomly selected character type
     let randomCharacter = getRandomCharacter(charTypes[randomCharacterType]);
     // add randomly selected character to password string
